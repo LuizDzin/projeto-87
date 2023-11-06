@@ -1,4 +1,4 @@
-canvas = new fabric.canvas('myCanvas');
+canvas = new fabric.Canvas('myCanvas');
 
  blockY=1;
  blockX=1;
@@ -8,9 +8,9 @@ blockImageHeight = 430;
 
 var blockImageObject= "";
 
-function newImage(getImage)
+function new_image(getImage)
 {
-fabric.image.fromURL(get_image, function(Img) {
+fabric.Image.fromURL(getImage, function(Img) {
 	block_image_object = Img;
 
 	block_image_object.scaleToWidth(blockImageWidth);
@@ -19,7 +19,7 @@ fabric.image.fromURL(get_image, function(Img) {
 		top:blockY,
 		left:blockX
 	});
-	canvas.add(blockImageObject);
+	canvas.add(block_image_object);
 });
 }
 
@@ -30,31 +30,31 @@ function myKeyDown(e)
 keyPressed = e.keyCode;
 console.log(keyPressed);
 
-	if(keyPressed == '75')
+	if(keyPressed == '69')
 	{
+		
 		new_image('rr1.png');
-		console.log("r");
 	}
 	if(keyPressed == '86')
 	{
-		blockX = 200;
-		new_image('rr.jpg');
+		blockX = 400;
+		new_image('gr.png');
 	}
 	
 	if(keyPressed == '65')
 	{
-		blockX =350;
-		new_image('rr1.png');
+		blockX =750;
+		new_image('yr.png');
 	}
 	if(keyPressed == '82')
 	{
-		blockX = 600;
-		new_image('yr.png');
+		blockX = 1100;
+		new_image('pr.png');
 	}
 	if(keyPressed == '73')
 	{
-		blockX = 700;
-		new_image('pr.png');
+		blockX = 1400;
+		new_image('br.png');
 	}
 	
 }
